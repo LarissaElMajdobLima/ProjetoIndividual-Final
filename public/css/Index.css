@@ -1,0 +1,398 @@
+/* Propriedades gerais */
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    list-style-type: none;
+    text-decoration: none;
+    /* cursor: url('http://www.rw-designer.com/cursor-extern.php?id=67359'), auto !important; */
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: red;
+    border-radius: 8px;
+    height: 3px;
+}
+
+h1 {
+    font-family: 'Fondamento', cursive;
+}
+
+
+/* -----------------------------------------------HEADER-------------------------------------------------------*/
+
+.banner{
+    height: 700px;   
+    background-image: url(../img/background/Background-Main.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;   
+
+}
+
+header {
+    width: 100%;
+    height: 75px;
+    display: flex;
+    position: absolute; 
+    /* fixed */
+}
+
+header nav {
+    width: 100%;
+    height: 75px;
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+}
+
+
+ul li {
+    display: flex;
+    align-items: center;
+    margin: 0 35px 0 0;
+}
+
+
+li a {
+    color: rgba(223, 6, 6, 0.904);
+    font-size: 25px;
+    margin-top: 40px;
+}
+
+.logo {
+    height: 100px;
+    margin: 20px 0 0 20px;
+    float: left;
+}
+
+
+.home {
+    margin-left: 80px;
+}
+
+.Login {
+    margin: 25px 0 0 190px;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    transition-duration: 600ms;
+}
+
+.iconLogin {
+    width: 50px;
+    margin-left: 45px;
+}
+
+b a {
+    color: rgba(223, 6, 6, 0.904) ;
+}
+
+b a:hover {
+    text-decoration: underline;
+}
+nav a:hover, a.current {
+    color: black;
+}
+
+.texto{
+    font-family: 'Fondamento', cursive;
+    position: relative;
+    top: 250px;
+    right: 300px;
+    text-align: center;
+    font-size: 25px;
+}
+
+.texto h1{
+    font-size: 60px;
+    margin-bottom: 0;
+}
+
+.texto h3{
+    margin-top: 0;
+    position: relative;
+    color: red;
+}
+
+.sobre {
+    font-family: 'Fondamento', cursive;
+    position: relative;
+    /* top: 370px;
+    right: 390px; */
+    top: 275px;
+    right: 310px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    color: rgba(223, 6, 6, 0.904);
+}
+
+
+
+/* -----------------------------------------------MAIN-------------------------------------------------------*/
+
+.transicao1, .transicao2 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 300px;
+}
+.transicao1{
+    background-image: url('../img/background/Background-Animus1.jpg');
+}
+.transicao2 {
+    background-image: url('../img/background/Background-Animus2.jpg');
+}
+
+.div-Assassinos {
+    background-image: url(../img/background/Background-Assassinos.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    height: 700px; 
+}
+
+.title-Assassinos {
+    font-family: 'Fondamento', cursive;
+    text-align: center; 
+    margin-bottom: 50px;
+}
+
+.img-Assassinos {
+   height: 500px; 
+   display: flex; 
+   justify-content: center; 
+   align-self: center;
+   cursor: pointer;
+}
+
+.Assassinos-left {
+    float: left;
+}
+
+.Assassinos-left:hover + .assassino_info {
+    width: 300px;
+}
+
+.assassino_info:hover{
+    width:  300px;
+}
+
+.assassino_info{
+    background-color: rgba(255, 255, 255, 0.596);
+    width: 0;
+    height: 470px;
+    transition: 0.7s;
+    align-self: center;
+    text-align: center;
+    font-family: 'Fondamento', cursive;
+    color: rgb(194, 22, 22);
+    overflow: hidden;
+}
+
+.assassino_info h5{
+    padding: 0 10px 0 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+
+}
+
+.mini-Assassins {
+    height: 240px;
+}
+
+
+.div_history{
+    background-image: url(../img/background/Background-Historia.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 700px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.history-master {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: blanchedalmond;
+    width: 1000px;
+    height: 580px;
+    border-radius: 20px;
+    padding: 10px;
+    opacity: 0.9;
+}
+
+.history-content {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.history-imagens {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 450px;
+    width: 200px;
+    margin-top: 80px;
+}
+
+.history-img {
+    height: 300px;
+    width: 200px;
+    margin: 15px;
+    box-shadow: 2px 7px 21px 10px rgba(83, 83, 83, 0.75);
+}
+
+.history-img2 {
+    height: 130px;
+    width: 185px;
+    margin: 15px;
+    box-shadow: 2px 7px 21px 10px rgba(83, 83, 83, 0.75); 
+}
+
+.history-img:hover, .history-img2:hover{
+    transform: scale(1.02);
+}
+
+.text-intro {
+    color: red;
+}
+
+.history-text {
+    width: 700px;
+    height: 450px;
+    padding: 15px;
+}
+
+
+ .text-title {
+    text-align: center;
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.final-text {
+    margin-top: -45px;
+    color: red;
+}
+
+
+/* -----------------------------------------------FOOTER-------------------------------------------------------*/
+.Footer-pai {
+    height: 60vh;
+    background-image: url('../img/background/Background-footer.jpg');
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.Footer-mae {
+    display: flex;
+    justify-content: center; 
+    color: rgb(22, 22, 22);
+    font-weight: bold;
+}
+
+.footer-div {
+    width: 430px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.footer-p {
+    text-align: center;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.login {
+    color: red;
+    cursor: pointer;
+    text-decoration: underline;
+    margin-top: 7px;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Fondamento', cursive;
+}
+
+.footer-title {
+    margin-top: -20px;
+    font-family: 'Fondamento', cursive;
+}
+
+.redes-sociais {
+    display: flex;
+    margin-top: 20px;
+}
+
+.redes-sociais a {
+    border: 4px solid transparent;
+    padding: 3px;
+    transition: 0.5s;
+}
+  
+.redes-sociais a:hover {
+    transition: 0.3s;
+    border: 4px solid red;
+}
+
+.img_redessociais {
+      width: 40px;
+      height: 40px;
+}
+
+.classificacao {
+    margin-left: 1350px;
+    width: 90px;
+}
+
+.footer-end {
+    height: 25px;
+    color: rgb(186, 0, 211);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}   
+
+
+
+
+
+
+
+
+
+
+
+

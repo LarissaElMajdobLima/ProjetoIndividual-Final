@@ -1,0 +1,271 @@
+/* Propriedades gerais */
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box ;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/* -----------------------MAIN-------------------------*/
+
+p {
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: underline;
+    margin: 20px;
+    color: rgb(68, 68, 68);
+}
+
+input {
+    width: 270px;
+    background-color: whitesmoke;
+    outline: none;
+}
+
+.esq_senha {
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: underline;
+    margin: 20px;
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+.logo {
+    height: 100px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.master {
+    height: 100vh;
+    background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/432eafa2-0022-410b-bb27-d2cf7ede58a3/d589gwf-78469c6d-b3bf-482d-b43d-ed10c22d97a6.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvNDMyZWFmYTItMDAyMi00MTBiLWJiMjctZDJjZjdlZGU1OGEzXC9kNTg5Z3dmLTc4NDY5YzZkLWIzYmYtNDgyZC1iNDNkLWVkMTBjMjJkOTdhNi5naWYifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.xl6w8aSg2omWTd2abt9MP6FuEhjHeSfF4VV19BPMio4');
+    background-position: cover;
+    background-size: 100% 100%;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
+.content {
+    background-color: rgb(68, 68, 68);
+    border-radius: 12px;
+    width: 55%;
+    height: 85%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.content::before {
+    content: "";
+    position: absolute;
+    background-color: #ccc;
+    background-image: url(https://64.media.tumblr.com/0687e32…/tumblr_nyhqfs99Ap1qi26lwo1_540.gifv);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 40%;
+    height: 100%;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+.box-first_content {
+   display: flex;
+}
+
+.box-first_content .second-column {
+    z-index: 11;
+}
+
+
+.first-column {
+    text-align: center;
+    width: 40%;
+    z-index: 10;
+}
+
+.second-column {
+    text-align: center;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box-second_content {
+    position: absolute;
+    display: flex;
+}
+
+.box-second_content .first-column {
+    order: 2;
+    z-index: -1;
+}
+
+.box-second_content .second-column {
+    order: 1;
+    z-index: -1;
+}
+
+
+.Title {
+    color: #9E0000;
+    margin: 20px;
+    font-family: 'Fondamento', cursive;
+}
+
+
+.box_inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 250px;
+}
+
+.input-items {
+    display: flex;
+    background-color: whitesmoke;
+    border: groove;
+    border-color: black;
+    border-radius: 12px;
+    padding: 5px;
+    margin: 20px;
+}
+
+.user {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.icon {
+    width: 35px;
+    margin-right: 5px;
+}
+
+
+.button {
+    border-radius: 12px;
+    font-weight: bold;
+    color: whitesmoke;
+    cursor: pointer;
+    padding: 8px 20px;
+    transition-duration: 0.5s;
+    margin: 0 95px;
+}
+
+
+.button-primary {
+    background-color: #9E0000;
+    border: 1px solid transparent;
+}
+
+.button-primary:hover {
+    background-color: transparent;
+    color: #9E0000;
+    border: 1px solid #9E0000;
+}
+
+/* EXTRA */
+.extra {
+    margin: 10px;
+}
+
+.extra img {
+   margin-top: 10px;
+   height: 50px;
+   visibility: hidden;
+}
+
+.extra .msg_erro {
+    background-color:  #e7b9c4; 
+    color: black; 
+    visibility: hidden;
+}
+
+
+/* CLASSES ATIVADAS PELO JS 
+(Responsáveis pela troca) */
+
+.cadastro-js .box-first_content .first-column {
+    z-index: 13;
+} 
+
+.cadastro-js .box-first_content .second-column {
+    z-index: 11;
+}
+
+.cadastro-js .box-second_content .first-column, 
+.cadastro-js .box-second_content .second-column {
+    z-index: -1;
+}
+
+.cadastro-js .content::before {
+    left: 0;
+    animation: slideCadastro 1.0s;
+}
+
+.login-js .box-second_content .first-column {
+    z-index: 13;
+}
+
+.login-js .box-second_content .second-column {
+    z-index: 11;
+}
+
+.login-js .box-first_content .first-column, 
+.login-js .box-first_content .second-column {
+    z-index: -1;
+}
+
+.login-js .content::before {
+    left: 60%;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    animation: slideLogin 1.0s;
+    z-index: 12;
+}
+
+
+
+/* ANIMACAO CSS */
+
+
+@keyframes slideLogin {
+
+    from {
+        left: 0;
+        
+    }
+
+    to {
+        left: 60%;
+      
+    }
+}
+
+
+
+@keyframes slideCadastro {
+    
+    from {
+        left: 60%;
+        
+    }
+
+    to {
+        left: 0;
+        
+    }
+}
+

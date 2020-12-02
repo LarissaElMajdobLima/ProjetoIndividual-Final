@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Requiescat in pace - LOGIN/CADASTRO</title>
+    <link rel="icon" href="./img/Icons/iconLogo.svg" style="width: 36px;" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/Login-Cadastro.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fondamento:ital@0;1&display=swap">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+
+<body>
+
+
+    <div class="master">
+        <main>
+
+            <div class="logo">
+                <a href="./Index.html"><img src="./img/Icons/AssassinsCreed_Logo.png" class="logo"></a>
+            </div>
+
+            <div class="container">
+
+                <div class="content box-first_content">
+
+                    <div class="first-column">
+                        <h1 class="Title">Bem vindo(a) de volta!</h1>
+                        <p>Faça seu login</p>
+                        <a class="button button-primary" id="login" href="#">
+                            Login
+                        </a>
+                    </div>
+                    <div class="second-column">
+
+                        <div class="box_inputs">
+                            <form id="form_cadastro" method="#" onsubmit="return cadastrar()">
+                                <h1 class="Title">Cadastro</h1>
+
+                                <div class="input-items">
+                                    <img class="icon" src="img/Icons/AssassinUser.png"
+                                        alt="Ícone de usuário personalizado-Assassino membro da ordem">
+                                    <input name="nickname" type="text" placeholder="Nickname* (Seu nome 'Assassino')"
+                                        autofocus="autofocus" required minlength="1">
+                                </div>
+
+                                <div class="input-items">
+                                    <img class="icon" src="img/Icons/iconBirth.svg" alt="Ícone de data de nascimento">
+                                    <input name="data_nasc" type="text" onclick="change_input_date()" id="date"
+                                        placeholder="Data de nascimento*" autofocus="autofocus" required minlength="1">
+                                </div>
+                                <!-- Ex: ano/mes/dia -->
+
+                                <div class="input-items">
+                                    <img class="icon" src="img/Icons/iconPassword.svg" alt="Ícone de senha">
+                                    <input id="senha" name="senha" type="password" placeholder="Senha*"
+                                        autofocus="autofocus" required minlength="5">
+                                </div>
+
+                                <div class="input-items">
+                                    <img class="icon" src="img/Icons/iconPassword.svg" alt="Ícone de senha">
+                                    <input id="conf_senha" name="conf_senha" type="password"
+                                        placeholder="Confirme sua Senha*" autofocus="autofocus" required minlength="5">
+                                </div>
+
+                                <button type="submit" class="button button-primary" id="btn_cadastrar">
+                                    Cadastrar
+                                </button>
+                            </form>
+                            </button>
+                            <div class="extra">
+                                <img src="img/Icons/miniAnimus.gif" id="img_aguarde_cadastro">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="content box-second_content">
+
+                    <div class="first-column">
+                        <h1 class="Title">Ainda não pertence à Irmandade?</h1>
+                        <p>Faça já seu cadastro</p>
+                        <a class="button button-primary" id="cadastro" href="#">
+                            Cadastro
+                        </a>
+                    </div>
+                    <div class="second-column">
+                        <h1 class="Title">Login</h1>
+                        <div class="box_inputs">
+                            <form id="form_login" method="#" onsubmit="return entrar()">
+
+                                <div class="input-items">
+                                    <img class="icon" src="img/Icons/AssassinUser.png"
+                                        alt="Ícone de usuário personalizado-Assassino membro da ordem">
+                                    <input name="lg_nickname" type="text" placeholder="Nickname*" autofocus="autofocus"
+                                        required minlength="1">
+                                </div>
+
+                                <div class="input-items">
+                                    <img class="icon" src="img/Icons/iconPassword.svg" alt="Ícone de senha">
+                                    <input name="lg_senha" type="password" placeholder="Senha*" autofocus="autofocus"
+                                        required minlength="1">
+                                </div>
+                                <p class="esq_senha">Esqueceu a senha?</p>
+
+                                <button type="submit" class="button button-primary" id="btn_entrar">
+                                    Entrar
+                            </form>
+                            </button>
+                            <div class="extra">
+                                <div id="div_erro" class="msg_erro">
+                                </div>
+                                <img src="img/Icons/miniAnimus.gif" id="img_aguarde_login">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script src="./JS/login.js"></script>
+        </main>
+    </div>
+
+</body>
+
+</html>
+
+<!-- Script das funções de cadastro e login ativadas pelos buttons -->
+<script>
+    var idade = 0; 
+
+    document.querySelector("#conf_senha");
+    document.querySelector('#senha');
+
+    function change_input_date() {
+        document.getElementById("date").type = "date";
+        console.log('change_input_date');
+    }
+
+    function validaData() {
+        var dataNasc = document.getElementById("date").value; // pega o valor do input
+
+        // compara as datas e faz o calculo da idade
+        var dataAtual = new Date();
+        var nasc = new Date(dataNasc);
+        idade = dataAtual.getFullYear() - nasc.getFullYear(); // Ano ATUAL - ano NASC
+        var mes = dataAtual.getMonth() - nasc.getMonth(); // Data ATUAL - Data NASC 
+        var dia = nasc.getDate() + 1; // +1 no valor data da variável Nasc
+        // SE (MES ATUAL - MES NASC < 0) OU (MES ATUAL - MES NASC = 0) E DATA ATUAL < DATA NASC 
+        // Subtrai 1 da variável idade 
+        if (mes < 0 || (mes == 0 && dataAtual.getDate() < dia)) {
+            idade--;
+            console.log(validaData)
+        }
+    }
+
+    function login() {
+        main.className = "login-js";
+    };
+
+    // CADASTRO
+    function cadastrar() {
+        aguardar('cadastrar');
+        validaData()
+        if ((conf_senha.value != senha.value) || (idade < 16)) {
+
+            if (conf_senha.value != senha.value) {
+                alert('Erro de Cadastro!');
+                alert('Os campos Confirme sua senha e Senha não se correspondem');
+                finalizar_aguardar('cadastrar', '');
+                // response.text().then(function (resposta) {
+                // div_erro.innerHTML = resposta;
+            } if (idade < 16) {
+                console.log(idade)
+                alert('Erro de Cadastro!');
+                alert('Infelizmente você não tem idade suficiente para se cadastrar');
+                finalizar_aguardar('cadastrar', '');
+            }
+            return false
+        }
+        var formulario = new URLSearchParams(new FormData(form_cadastro));
+
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            body: formulario
+        }).then(function (response) {
+
+            if (response.ok) {
+                alert('Seja bem vindo(a) à nossa Irmandade');
+                login();
+                alert('Para ter acesso ao conteúdo extra, faça o Login!');
+                img_aguarde_login.style.display = 'none';
+            }
+        });
+        return false;
+    }
+
+
+    function aguardar(type) {
+
+        if (type == 'cadastrar') {
+            btn_cadastrar.disabled = true;
+            img_aguarde_cadastro.style.visibility = 'visible';
+            // div_erro.style.display = 'none';
+
+        }
+        if (type == 'login') {
+            btn_entrar.disabled = true;
+            img_aguarde_login.style.visibility = 'visible';
+            // div_erro.style.display = 'none';
+        }
+    }
+
+
+    function finalizar_aguardar(type, resposta) {
+        if (type == 'login') {
+            btn_entrar.disabled = false;
+            alert(resposta);
+            img_aguarde_login.style.display = 'none';
+            // div_erro.style.display = 'block';
+            // div_erro.innerHTML = resposta;
+
+        }
+        if (type == 'cadastrar') {
+            btn_cadastrar.disabled = false;
+            // alert(resposta);
+            img_aguarde_cadastro.style.display = 'none';
+        }
+    }
+
+
+    // LOGIN
+    function entrar() {
+        aguardar('login');
+        var formulario = new URLSearchParams(new FormData(form_login));
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            body: formulario
+        }).then(resposta => {
+
+            if (resposta.ok) {
+
+                resposta.json().then(json => {
+
+                    sessionStorage.id_usuario_meuapp = json.id_usuario;
+                    console.log(json)
+                    window.location.href = 'wiki-Assassins.html';
+                });
+
+            } else {
+                // alert('Erro de login! Tente novamente!');
+                console.log('Erro de login!');
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                    finalizar_aguardar('login', texto);
+                });
+            }
+        });
+
+        return false;
+    }
+
+</script>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="input-items">
+
+        <input name="data_nasc" type="text" onclick="change_input_date()" id="date" placeholder="Data de nascimento*"
+            autofocus="autofocus" required minlength="1">
+        <button onclick="validaData()">cadastrar</button>
+        <div id="resposta"></div>
+    </div>
+</body>
+
+</html>
+
+<script>
+    function change_input_date() {
+        document.getElementById("date").type = "date";
+        console.log('change_input_date')
+    }
+
+function validaData(){
+   var dataNasc = document.getElementById("date").value; // pega o valor do input
+
+   // compara as datas e faz o calculo da idade
+   var dataAtual = new Date(); 
+   var nasc  = new Date(dataNasc);
+   var idade = dataAtual.getFullYear() - nasc.getFullYear(); // Ano ATUAL - ano NASC
+   var mes = dataAtual.getMonth() - nasc.getMonth(); // Data ATUAL - Data NASC 
+   var dia = nasc.getDate() + 1; // +1 no valor data da variável Nasc
+   // SE (MES ATUAL - MES NASC < 0) OU (MES ATUAL - MES NASC = 0) E DATA ATUAL < DATA NASC 
+   // Subtrai 1 da variável idade 
+   if (mes < 0 || (mes == 0 && dataAtual.getDate() < dia) ){
+    idade--;
+   };
+
+   resposta.innerHTML = `${idade}`;
+}
+
+// Lógica 
+// Primeiramente, os anos da data_atual e data_nasc são subtraidos. Esse valor é atribuído à variável idade...
+// Depois, são subtraídos os meses da data_atual e data_nasc. O valore é atribuído à variável mes
+
+// 1º SE o mês de aniversário da pessoa já passou, o valor da variável idade corresponde exatamente à sua idade
+// 2º SE o mês de aniversário da pessoa ainda não chegou(MES ATUAL - MES NASC < 0), ela ainda não fez + 1 ano de vida do ano correspondente, então ela tem 1 ano a menos
+// 3º SE o mês de aniversário da pessoa corresponde ao mês atual E o dia do seu aniversário ainda não chegou (DATA ATUAL < DATA NASC) ela ainda não fez + 1 ano de vida do ano e mês correspondente, então ela tem 1 ano a menos)
+
+</script>

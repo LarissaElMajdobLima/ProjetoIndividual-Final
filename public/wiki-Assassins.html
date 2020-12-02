@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.9">
+    <title>Requiescat in pace - "Wiki" de Assassin's Creed</title>
+    <link rel="icon" href="./img/Icons/iconLogo.svg" style="width: 36px;" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/wiki-Assassins.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fondamento:ital@0;1&display=swap">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script type="text/javascript" src="funcoes.js"></script>
+</head>
+
+
+<body onload="verificar_autenticacao()">
+    <div class="banner">
+        <header>
+            <nav>
+                <div class="container">
+                    <ul>
+                        <li><img src="./img/Icons/AssassinsCreed_Logo.png" class="logo"></li>
+                        <li class="home"><a href="./Index.html"><i class="fas fa-home"></i><br>Home</a></li>
+                        <li><a href="./Livros.html"><i class="fas fa-book"></i><br>Livros</a></li>
+                        <li><a href="./Jogos.html"><i class="fas fa-gamepad"></i><br>Jogos</a></li>
+                        <li><a href="./Filme.html"><i class="fas fa-film"></i><br>Filme</a></li>
+                        <li><a class="current" href="./wiki-Assassins.html"><i class="fas fa-search"></i><br>"Wiki"</a></li>
+                        <div class="Login">
+                            <li><img class="iconLogin" src="./img/Icons/Icon-Animus.png" alt="ícone do Animus"></li>
+                            <b><a href="" onclick="logoff()">Deslogar</a></b>
+                        </div>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <div class="texto">
+            <h1>Requiescat in pace</h1>
+            <h3>~ Auditore, Ezio</h3>
+        </div>
+        <div class="sobre">
+            <p>
+                <i>Um site que apresenta um pouco do vasto universo de Assassin's Creed.
+                    <br>
+                    Dedicado especialmente aos fãs!
+                </i>
+            </p>
+        </div>  
+    </div>
+    
+    <div class="transicao1"></div>
+
+    <div class="wiki-master">
+        <div class="wiki-content">
+            <div class="barra-conteudo">
+                <h2>Conteúdos</h2>
+
+                <div onclick="conteudo1()" class="conteudos">
+                    <h2>Quem são os Assassinos?</h2>
+                </div>
+                <div onclick="conteudo2()" class="conteudos">
+                    <h2>Ideologia</h2>
+                </div>
+                <div onclick="conteudo3()" class="conteudos">
+                    <h2>Objetivos e Motivação</h2>
+                </div>
+                <div onclick="conteudo4()" class="conteudos">
+                    <h2>Ceticismo</h2>
+                </div>
+                <h3>Clique nas barras para interagir e obter mais informações!</h3>
+            </div>
+
+            <div class="div-texto">
+                <h1 class="title">Saiba mais sobre esse universo!</h1>
+                <div id="text1" style="display: none;">
+                    <br>
+                    <br>
+                    <h3 class="text-title">Quem são os Assassinos?</h3>
+                    <p class="textos">
+                        <br>
+                        <br>
+                        A Irmandade dos Assassinos é uma organização mundial formada por indivíduos de todos os
+                        tipos que existiu durante toda a história e trava um conflito eterno com seus inimigos
+                        jurados, a Ordem dos Templários.
+                        <br>
+                        Ao longo de sua existência, adotaram muitos nomes, tendo se organizado formalmente apenas em
+                        47 AEC, quando Bayek e Aya uniram diversos indivíduos de origens distintas com pensamentos
+                        similares e formaram os Ocultos. Durante a Idade Média, foram novamente reorganizados no
+                        Levante por Hassan-i Sabbah como uma organização pública militar.
+                        <br>
+                        Posteriormente, Altaïr
+                        Ibn-La'Ahad conduziu notáveis reformas na ideologia e modo de agir da Irmandade, e com sua
+                        morte na queda de Masyaf, os Assassinos reorganizaram-se completamente como uma sociedade
+                        secreta. Desde então, a Irmandade expandiu-se pelo globo e tem agido discretamente para
+                        atingir seus objetivos.
+                        <br>
+                        <br>
+                        O propósito dos Assassinos é lutar pela a sobrevivência da liberdade, acreditando que apenas
+                        ela garante a progressão de novas ideias e o crescimento da individualidade. Naturalmente,
+                        isso coloca-os como opostos absolutos dos Templários, que buscam uma Nova Ordem Mundial onde
+                        a raça humana está subjugada à sua vontade. Por isso, as duas facções batalharam-se por toda
+                        a história conhecida e além. Recentemente, os Assassinos também entraram em conflito com os
+                        Instrumentos da Primeira Vontade, outra organização secreta que busca restabelecer o domínio
+                        dos Isu sobre a humanidade.
+                    </p>
+
+                </div>
+
+                <div id="text2" style="display: none;">
+                    <br>
+                    <br>
+                    <h3 class="text-title">Ideologia</h3>
+                    <p class="text-title">O credo</p>
+                    <p class="textos">
+                        <br>
+                        <br>
+                        O fundamento da Irmandade é um forte conjunto de valores que estritamente definem o seu modo
+                        de vida, conhecido simplesmente como "o Credo", que é formado por três dogmas
+                        inquestionáveis.
+                        <br>
+                        <br>
+                        1. Afaste tua lâmina da carne dos inocentes.
+                        <br>
+                        2. Esconda-te em plena vista.
+                        <br>
+                        3. Nunca comprometa a irmandade.
+                        <br>
+                        <br>
+                        Estas regras permeavam cada detalhe do cotidiano de um Assassino, assim como a luta deles
+                        pela "paz de todas as coisas". Os Assassinos executavam seus objetivos através do
+                        assassinato estratégico de figuras políticas, na esperança de que a morte de um indivíduo
+                        levaria à salvação de milhares. Eles também acreditam que lutam por todos aqueles que não
+                        possuem as habilidades, recursos ou conhecimento necessários para impedir aqueles que abusam
+                        do poder.
+                        <br>
+                        <br>
+                        <i>
+                            "Nada é verdade, tudo é permitido."
+                            ― O Credo dos Assassinos
+                        </i>
+                    </p>
+                </div>
+
+                <div id="text3" style="display: none;">
+                    <br>
+                    <br>
+                    <h3 class="text-title">Objetivos e Motivação</h3>
+                    <p class="textos">
+                        <br>
+                        <br>
+                        Tendo em vista a sua antipatia ao autoritarismo, os Assassinos têm historicamente lutado sob
+                        a ideia de libertação para povos oprimidos. Contudo, não se deve confundir o objetivo deles
+                        com liberdade descontrolada e caótica, pois o núcleo de suas ambições é a paz, próspera e
+                        harmoniosa. Um mundo onde as pessoas se respeitam e possuem o livre-arbítrio para pensar da
+                        forma que desejarem, essencialmente uma utopia. Nesse aspecto, eles compartilham com os
+                        Templários um desejo sincero de eliminar o caos que assola a humanidade. As visões opostas
+                        dos dois grupos sobre como completar esse objetivo, entretanto, esmagam essa similaridade.
+                        <br>
+                        <br>
+                        Entretanto, em contradição com sua visão otimista da humanidade, os Assassinos nem sempre
+                        mantém a mesma fé por adversários dos direitos humanos, como, naturalmente, os Templários.
+                        Isto é a força condutora de suas operações, em que assassinatos tomam prioridade. Altaïr,
+                        por exemplo, duvidou a eficiência da persuasão em certos casos, lamentando que muitos
+                        inimigos estavam irremediavelmente presos em suas ideologias para serem impedidos pelo
+                        simples diálogo. Para proteger as vidas de inocentes, os Assassinos admitem que uma solução
+                        nobre e ideal nem sempre é possível, e portanto deve-se tirar vidas para salvar outras.
+                        Muitos membros adotaram compaixão como uma importante motivação, paradoxalmente levando
+                        objetivos a girar muito frequentemente em torno do assassinato.
+                    </p>
+                </div>
+
+                <div id="text4" style="display: none;">
+                    <br>
+                    <br>
+                    <h3 class="text-title">Ceticismo</h3>
+                    <p class="textos">
+                        <br>
+                        <br>
+                        Ao longo de sua existência, a Irmandade tem combatido tiranos, considerado-se os "defensores
+                        dos indefesos" e assumido ideais de liberdade e igualdade. Tais princípios podem levar à
+                        crença de que os Assassinos, como os Templários, estão fundados em um conjunto distinto de
+                        ideais. Contudo, a filosofia dos Assassinos não está presa ao idealismo, mas sim ao
+                        racionalismo e epistemologia, com o ponto de vista de que antes de desenvolver um código de
+                        ética ou fé, é necessário analisar o mundo de uma perspectiva estritamente científica, sem a
+                        intervenção de aspectos subjetivos como religião e moralidade.
+                        <br>
+                        <br>
+                        Desse ceticismo, nasce a máxima Assassina de que "nada é verdade... ", uma afirmação
+                        relativista designada com o intuito de providenciar uma resposta às diferentes convicções
+                        acerca da solução perfeita aos problemas da humanidade: que não existe uma verdade e
+                        qualquer tentativa de aplicação de um único ideal numa escala universal é irrealista e
+                        imprecisa. Tratar a própria crença como uma verdade absoluta é, além de ocultar as
+                        perspectivas diferentes de dissidentes inevitáveis, submeter-se à irracionalidade da fé
+                        cega.
+                        <br>
+                        O segundo componente do Credo; "...tudo é permitido"; é uma extensão deste princípio de
+                        incerteza. Tendo em vista que a quantidade de variáveis é infinita, teoricamente tudo na
+                        natureza, enquanto não houver respostas absolutas, é possível. Assim sendo, deve-se
+                        permanecer atento ao inesperado e desconhecido, e ao chegar a uma conclusão, sempre lembrar
+                        da possível imprecisão de tal conclusão.
+                        <br>
+                        <br>
+                        <i>
+                            Nas palavras de Haytham Kenway, a Ordem dos Templários nasceu de uma realização de que a
+                            humanidade é fundamentalmente corrupta, e portanto precisa ser dominada para prosperar.
+                            Pela
+                            perspectiva Assassina, a Irmandade nasceu de uma realização de que para ser sábio, é
+                            preciso
+                            primeiro abandonar a suposição de que foi descoberto conhecimento absoluto.
+                        </i>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="Footer-pai">
+            <div class="container">
+                <div class="Footer-mae">
+
+                    <div class="Footer-text">
+                        <div class="footer-div">
+                            <p class="footer-p">
+                                Se interessou pelo assunto?
+                                <br>
+                                Quer saber mais sobre esse universo dos Assassinos?
+                            </p>
+                            <a href="./Login-Cadastro.html" class="login">Faça seu cadastro, se torne membro da nossa
+                                Irmandade e tenha acesso à esses e outros conteúdos!</a>
+                        </div>
+                    </div>
+
+                    <div class="footer-div">
+                        <div class="footer-social">
+                            <h2 class="footer-title">Redes sociais</h2>
+                            <div class="redes-sociais">
+                                <a href="https://www.instagram.com" target="_blank"><img class="img_redessociais"
+                                        src="./img/Icons/IconInsta.svg"></a>
+                                <a href="https://www.facebook.com" target="_blank"><img class="img_redessociais"
+                                        src=".//img/Icons/IconFace.svg"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img class="classificacao" src="../img/Icons/ClassificacaoIdade.jpg"
+                    alt="Classificação indicativa de 16 anos">
+            </div>
+        </div>
+
+        <div class="footer-end">
+            <i>Alguns direitos reservados à Ubisoft</i>
+            /
+            <i> Larissa El Majdob de Lima &COPY; 2020 &hearts;</i>
+        </div>
+
+    </footer>
+</body>
+
+</html>
+
+<script src="./JS/wiki-Assassins.js"></script>

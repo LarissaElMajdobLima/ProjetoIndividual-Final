@@ -1,0 +1,352 @@
+/* Propriedades gerais */
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: red;
+    border-radius: 8px;
+    height: 3px;
+}
+
+h1,h3 {
+    font-family: 'Fondamento', cursive;
+    color: red;
+}
+
+/* -----------------------------------------------HEADER-------------------------------------------------------*/
+
+.banner{
+    height: 700px;   
+    background-image: url(../img/background/Background-Main.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;   
+
+}
+
+header {
+    width: 100%;
+    height: 75px;
+    display: flex;
+    position: absolute; 
+    /* fixed */
+}
+
+header nav {
+    width: 100%;
+    height: 75px;
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+}
+
+
+ul li {
+    display: flex;
+    align-items: center;
+    margin: 0 35px 0 0;
+}
+
+
+li a {
+    color: rgba(223, 6, 6, 0.904);
+    font-size: 25px;
+    margin-top: 40px;
+}
+
+.logo {
+    height: 100px;
+    margin: 20px 0 0 20px;
+    float: left;
+}
+
+.home {
+    margin-left: 80px;
+}
+
+.Login {
+    margin: 25px 0 0 190px;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    transition-duration: 600ms;
+}
+
+.iconLogin {
+    width: 50px;
+    margin-left: 45px;
+}
+
+b a {
+    color: rgba(223, 6, 6, 0.904) ;
+}
+
+b a:hover {
+    text-decoration: underline;
+}
+nav a:hover, a.current {
+    color: black;
+}
+
+.texto{
+    font-family: 'Fondamento', cursive;
+    position: relative;
+    top: 250px;
+    right: 300px;
+    text-align: center;
+    font-size: 25px;
+}
+
+.texto h1{
+    font-size: 60px;
+    margin-bottom: 0;
+    color: black;
+}
+
+.texto h3{
+    margin-top: 0;
+    position: relative;
+    color: red;
+}
+
+.sobre {
+    font-family: 'Fondamento', cursive;
+    position: relative;
+    top: 275px;
+    right: 310px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    color: rgba(223, 6, 6, 0.904);
+}
+
+/* -----------------------------------------------MAIN-------------------------------------------------------*/
+
+.transicao1, .transicao2 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 300px;
+}
+.transicao1{
+    background-image: url('../img/background/Background-Animus1.jpg');
+}
+.transicao2 {
+    background-image: url('../img/background/Background-Animus2.jpg');
+}
+
+.content-pai {
+    height: 90vh;
+    width: 100%;
+    display: flex;  
+    background-image: url('../img/background/Background-jogos.jpg');
+    background-position: center;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.content-mae {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10%;
+}
+
+.content-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    opacity: 0.7;
+    color: whitesmoke;
+    height: 250px;
+    padding: 25px;
+    border-radius: 12px;
+    width: 1000px;
+}
+.content-text p {
+    margin-top: 30px;
+}
+
+.Game-master {
+    background-image: url('../img/background/MainBackground-J-L.gif');
+    background-position: center;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.Games-pai {
+    width: 80%;
+    height: 4100px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.Games-mae {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    margin-top: 50px;
+    background-color: white;
+    padding: 7px;
+    border-radius: 12px;
+    opacity: 0.9;
+}
+
+.games-right {
+    align-self: flex-end;
+}
+
+.games-left {
+    align-self: flex-start;
+}
+.games-left, .games-right {
+    display: flex;
+    background-color: whitesmoke;
+    box-shadow: 2px 7px 21px 10px rgba(83, 83, 83, 0.75); 
+    border-radius: 8px;
+    width: 980px;
+    height: 250px;
+    margin-top: 50px;
+    padding: 10px;
+}
+
+.games-left:hover, .games-right:hover {
+    transform: scale(1.03);
+}
+
+.imagem {
+    display: flex;
+    justify-self: flex-start;
+    margin: 10px;
+}
+
+.games-img{
+    width: 160px;
+    height: 230px;
+}
+
+.games-name {
+    text-align: center;
+}
+
+.games-text{
+    color: black;
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+}
+
+.resumo {
+    margin: 15px 10px;
+    width: 780px;
+    font-size: 13px;
+}
+
+/* -----------------------------------------------FOOTER-------------------------------------------------------*/
+.Footer-pai {
+    height: 60vh;
+    background-image: url('../img/background/Background-footer.jpg');
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.Footer-mae {
+    display: flex;
+    justify-content: center; 
+    color: rgb(22, 22, 22);
+    font-weight: bold;
+}
+
+.footer-div {
+    width: 430px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.footer-p {
+    text-align: center;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.login {
+    color: red;
+    cursor: pointer;
+    text-decoration: underline;
+    margin-top: 7px;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Fondamento', cursive;
+}
+
+.footer-title {
+    margin-top: -20px;
+    font-family: 'Fondamento', cursive;
+}
+
+.redes-sociais {
+    display: flex;
+    margin-top: 20px;
+}
+
+.redes-sociais a {
+    border: 4px solid transparent;
+    padding: 3px;
+    transition: 0.5s;
+}
+  
+.redes-sociais a:hover {
+    transition: 0.3s;
+    border: 4px solid red;
+}
+
+.img_redessociais {
+      width: 40px;
+      height: 40px;
+}
+
+.classificacao {
+    margin-left: 1350px;
+    width: 90px;
+}
+
+.footer-end {
+    height: 25px;
+    color: rgb(186, 0, 211);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}   
