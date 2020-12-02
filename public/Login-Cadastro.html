@@ -130,16 +130,17 @@
 
 <!-- Script das funções de cadastro e login ativadas pelos buttons -->
 <script>
+    // var idade usada na função validaData para lhe atribuir o valor correspondente, e chamada na funcao cadastrar para verificacao de idade- Variavel GLOBAL
     var idade = 0; 
-
+    // "Pegando" os inputs senha e conf_senha, usados para validação na funcao cadastrar
     document.querySelector("#conf_senha");
     document.querySelector('#senha');
-
+    // Mudando TIPO do input data_nasc
     function change_input_date() {
         document.getElementById("date").type = "date";
         console.log('change_input_date');
     }
-
+    // funcao que atribui a idade da pessoa, baseada na data de nascimento
     function validaData() {
         var dataNasc = document.getElementById("date").value; // pega o valor do input
 
@@ -156,7 +157,7 @@
             console.log(validaData)
         }
     }
-
+    // funcao que troca a classe da main-usada na funcao cadastro 
     function login() {
         main.className = "login-js";
     };
@@ -165,6 +166,7 @@
     function cadastrar() {
         aguardar('cadastrar');
         validaData()
+        // Validacao de confirme_senha e senha E validacao de idade 
         if ((conf_senha.value != senha.value) || (idade < 16)) {
 
             if (conf_senha.value != senha.value) {
