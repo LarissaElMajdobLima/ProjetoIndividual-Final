@@ -23,9 +23,39 @@
     height: 3px;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 h2, h3 {
     margin: 7px;
     font-family: 'Fondamento', cursive;
+}
+
+.divSeta {
+    float: right;
+    margin: 75px;
+}
+
+.fa-arrow-up  {
+    font-size: 35px;
+    color: red;
+    cursor: pointer;
+    animation: seta 1s infinite;
+    position: fixed;
+}
+
+/* Animação da seta, o keyframe seta o movimento inicial e final da animação */
+@keyframes seta {
+    0% {
+      bottom: 7%;
+    }
+    50% {
+      bottom: 5%;
+    }
+    100% {
+      bottom: 7%;
+    }
 }
 
 /* -----------------------------------------------HEADER-------------------------------------------------------*/

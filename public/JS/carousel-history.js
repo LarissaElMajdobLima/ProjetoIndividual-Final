@@ -25,3 +25,4 @@ function showSlides(n) {
 // Parte responsável por "mostrar" o slide da imagem atual- (-1 porque foi utilizado o Array, que inicia a contagem no 0)
   slides[slideIndex-1].style.display = "block";
 }
+
